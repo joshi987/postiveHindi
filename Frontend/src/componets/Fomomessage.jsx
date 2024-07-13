@@ -11,19 +11,31 @@ function Fomomessage() {
         </h2>
 
         <p className="font-semibold text-sm md:text-lg leading-relaxed mb-4">
-          हमारा शैक्षिक गेम बच्चों को मनोरंजक गतिविधियों के जरिए उनका फोकस और संज्ञानात्मक क्षमताएं बेहतर बनाने में मदद करता है, जिससे वे खेलते-खेलते सीखते हैं।
+          हमारा <a href="https://hindi-brainvoyage.vercel.app/">शैक्षिक</a> गेम बच्चों को मनोरंजक गतिविधियों के जरिए उनका फोकस और संज्ञानात्मक क्षमताएं बेहतर बनाने में मदद करता है, जिससे वे खेलते-खेलते सीखते हैं।
         </p>
         <h3 className="text-xl md:text-2xl font-semibold mb-2">विशेषताएं</h3>
         <ul className="list-disc pl-5 mb-4">
-          <li className="text-sm md:text-lg leading-relaxed">मिलान जोड़ियों के साथ स्मृति प्रतिधारण में सुधार</li>
-          <li className="text-sm md:text-lg leading-relaxed">पैटर्न पहचान: पैटर्न की पहचान और पूरा करके विश्लेषणात्मक कौशल बढ़ाएं</li>
-          <li className="text-sm md:text-lg leading-relaxed">फोकस व्यायाम: इंटरैक्टिव कार्यों के माध्यम से ध्यान अवधि बनाएं</li>
+          <li className="text-sm md:text-lg leading-relaxed">
+            <a href="https://hindi-brainvoyage.vercel.app/">मिलान जोड़ियों</a> के साथ <a href="https://hindi-brainvoyage.vercel.app/">स्मृति</a> प्रतिधारण में सुधार
+          </li>
+          <li className="text-sm md:text-lg leading-relaxed">
+            <a href="https://hindi-brainvoyage.vercel.app/">पैटर्न</a> पहचान: <a href="https://hindi-brainvoyage.vercel.app/">पैटर्न</a> की पहचान और पूरा करके विश्लेषणात्मक कौशल बढ़ाएं
+          </li>
+          <li className="text-sm md:text-lg leading-relaxed">
+            <a href="https://hindi-brainvoyage.vercel.app/">फोकस</a> व्यायाम: इंटरैक्टिव कार्यों के माध्यम से ध्यान अवधि बनाएं
+          </li>
         </ul>
         <h3 className="text-xl md:text-2xl font-semibold mb-2">लाभ</h3>
         <ul className="list-disc pl-5">
-          <li className="text-sm md:text-lg leading-relaxed">बढ़ी हुई मेमोरी: इंटरैक्टिव गेम जो मेमोरी रिटेंशन को बढ़ावा देते हैं</li>
-          <li className="text-sm md:text-lg leading-relaxed">बेहतर फोकस: मजेदार गतिविधियां जो धीरे-धीरे फोकस अवधि को बढ़ाती हैं</li>
-          <li className="text-sm md:text-lg leading-relaxed">गंभीर सोच: पहेलियाँ और चुनौतियाँ जो समस्या-समाधान कौशल विकसित करती हैं</li>
+          <li className="text-sm md:text-lg leading-relaxed">
+            बढ़ी हुई <a href="https://hindi-brainvoyage.vercel.app/">मेमोरी</a>: इंटरैक्टिव गेम जो <a href="https://hindi-brainvoyage.vercel.app/">मेमोरी</a> रिटेंशन को बढ़ावा देते हैं
+          </li>
+          <li className="text-sm md:text-lg leading-relaxed">
+            बेहतर <a href="https://hindi-brainvoyage.vercel.app/">फोकस</a>: मजेदार गतिविधियां जो धीरे-धीरे <a href="https://hindi-brainvoyage.vercel.app/">फोकस</a> अवधि को बढ़ाती हैं
+          </li>
+          <li className="text-sm md:text-lg leading-relaxed">
+            गंभीर सोच: पहेलियाँ और चुनौतियाँ जो समस्या-समाधान कौशल विकसित करती हैं
+          </li>
         </ul>
       </div>
       {/* Image */}
