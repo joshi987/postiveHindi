@@ -17,6 +17,7 @@ const Form = () => {
   const [reference, setReference] = useState('');
   const [otherReference, setOtherReference] = useState(''); // State for other reference text
   const [formVisible, setFormVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const timerId = setTimeout(() => {
@@ -29,6 +30,7 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when form submission starts
     const userData = {
       parentName,
       childAge,
@@ -53,6 +55,8 @@ const Form = () => {
     } catch (error) {
       console.error('उपयोगकर्ता पंजीकृत करने में त्रुटि', error);
       toast.error('उपयोगकर्ता पंजीकृत करने में विफल');
+    } finally {
+      setLoading(false); // Set loading to false after form submission
     }
   };
 
@@ -198,6 +202,11 @@ const Form = () => {
               </div>
             </form>
           </motion.div>
+          {loading && (
+            <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-30">
+              <div className="text-white text-xl font-semibold">कृपया प्रतीक्षा करें...</div>
+            </div>
+          )}
         </div>
       )}
       <ToastContainer />
