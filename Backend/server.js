@@ -13,10 +13,13 @@ const PORT = process.env.PORT || 5001;
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:false})); 
 
+app.use(cors({
+  origin:["https://hindi-brainvoyage.vercel.app/"],
+  credentials:true
+}));
 //Routes
 app.use("/api/users", userRoute);
 
