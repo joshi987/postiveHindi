@@ -84,6 +84,6 @@ const registrationSchema = new mongoose.Schema({
   timestamps: true // Adds createdAt and updatedAt timestamps
 });
 
-const Registration = mongoose.model('postiveEnglishRegistration', registrationSchema);
+const Registration = mongoose.model('postiveHindiRegistration', registrationSchema);
 
 module.exports = Registration;
