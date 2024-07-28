@@ -19,7 +19,7 @@ const Header = () => {
             </h1>
             <img src={Girl} alt="Girl" className="hidden md:block w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16" /> {/* Hide on small screens */}
           </div>
-          <div className="hidden md:block">
+          <div className=" md:block">
             <Form />
           </div>
         </div>

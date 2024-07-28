@@ -485,7 +485,8 @@ const Form = () => {
 
     try {
       await axios.post(`${BACKEND_URL}/api/users/register`, userData);
-      toast.success('उपयोगकर्ता सफलतापूर्वक पंजीकृत किया गया');
+      alert('उपयोगकर्ता सफलतापूर्वक पंजीकृत किया गया');
+      
       // Reset form fields
       setParentName('');
       setChildAge('');
@@ -498,7 +499,7 @@ const Form = () => {
       setFormVisible(false);
     } catch (error) {
       console.error('उपयोगकर्ता पंजीकृत करने में त्रुटि', error);
-      toast.error('उपयोगकर्ता पंजीकृत करने में विफल');
+      alert('उपयोगकर्ता पंजीकृत करने में विफल');
     } finally {
       setLoading(false); // Set loading to false after form submission
     }
@@ -666,7 +667,7 @@ const Form = () => {
           )}
         </div>
       )}
-      <ToastContainer />
+    
     </div>
   );
 };
