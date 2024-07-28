@@ -526,7 +526,7 @@ const Form = () => {
           onClick={handleBackdropClick}
         >
           <motion.div
-            className="relative max-w-sm w-full bg-white p-4 rounded-lg shadow-2xl overflow-hidden scrollable-modal"
+            className="relative max-w-sm w-full bg-white p-4 rounded-lg shadow-2xl overflow-y-auto max-h-[90vh]"
             initial={{ y: '-100vh' }}
             animate={{ y: 0 }}
             transition={{ type: 'spring', stiffness: 120 }}
@@ -537,7 +537,7 @@ const Form = () => {
             >
               <FaTimes />
             </button>
-            <form onSubmit={handleSubmit} className="form-container">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <h2 className="text-2xl font-extrabold mb-4 text-center text-indigo-600">पंजीकरण फॉर्म</h2>
               
               <div className="mb-2">
