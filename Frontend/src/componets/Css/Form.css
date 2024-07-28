@@ -16,3 +16,14 @@
     }
   }
   
+  .scrollable-modal {
+    max-height: 90vh; /* Adjust as needed */
+    overflow-y: auto;
+  }
+  
+  .form-container {
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  

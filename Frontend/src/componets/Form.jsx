@@ -452,8 +452,6 @@ import { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import './Css/Form.css';
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { motion } from 'framer-motion';
 
 export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
@@ -513,7 +511,7 @@ const Form = () => {
 
   return (
     <div className="container mx-auto mt-4">
-   <div className="flex justify-center">
+      <div className="flex justify-center">
         <button
           onClick={() => setFormVisible(true)}
           className="bg-gradient-to-r from-gray-200 to-gray-400 text-black font-bold py-2 px-4 md:py-3 md:px-6 rounded-full shadow-lg text-sm md:text-xl glow-button transition duration-300 ease-in-out transform hover:scale-105"
@@ -528,7 +526,7 @@ const Form = () => {
           onClick={handleBackdropClick}
         >
           <motion.div
-            className="relative max-w-sm w-full bg-white p-4 rounded-lg shadow-2xl overflow-hidden max-h-screen"
+            className="relative max-w-sm w-full bg-white p-4 rounded-lg shadow-2xl overflow-hidden scrollable-modal"
             initial={{ y: '-100vh' }}
             animate={{ y: 0 }}
             transition={{ type: 'spring', stiffness: 120 }}
@@ -539,7 +537,7 @@ const Form = () => {
             >
               <FaTimes />
             </button>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="form-container">
               <h2 className="text-2xl font-extrabold mb-4 text-center text-indigo-600">पंजीकरण फॉर्म</h2>
               
               <div className="mb-2">
@@ -637,37 +635,41 @@ const Form = () => {
 
               {reference === 'Other' && (
                 <div className="mb-2">
-                  <label htmlFor="otherReference" className="block text-sm font-medium text-indigo-700">कृपया निर्दिष्ट करें</label>
+                  <label htmlFor="otherReference" className="block text-sm font-medium text-indigo-700">अन्य संदर्भ दर्ज करें</label>
                   <input
                     type="text"
                     id="otherReference"
                     className="mt-1 block w-full px-2 py-1 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    placeholder="संदर्भ दर्ज करें"
+                    placeholder="अन्य संदर्भ दर्ज करें"
                     value={otherReference}
                     onChange={(e) => setOtherReference(e.target.value)}
+                    required
                   />
                 </div>
               )}
 
-              <div className="text-center">
+              <div className="mt-4 flex justify-center">
                 <button
                   type="submit"
-                  className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700 shadow-md"
-                  disabled={loading} // Disable button when loading
+                  className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:from-indigo-600 hover:to-blue-700 transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center"
                 >
-                  {loading ? 'कृपया प्रतीक्षा करें...' : 'सबमिट करें'}
+                  {loading ? (
+                    <span className="flex items-center">
+                      <svg className="animate-spin h-5 w-5 text-white mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C6.477 0 2 4.477 2 10h2zm2 5.291A7.962 7.962 0 014 12H2c0 3.042 1.135 5.824 3 7.938l1-1.647z"></path>
+                      </svg>
+                      सबमिट कर रहा है...
+                    </span>
+                  ) : (
+                    'सबमिट करें'
+                  )}
                 </button>
               </div>
             </form>
           </motion.div>
-          {loading && (
-            <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-30">
-              <div className="text-white text-xl font-semibold">कृपया प्रतीक्षा करें...</div>
-            </div>
-          )}
         </div>
       )}
-    
     </div>
   );
 };
